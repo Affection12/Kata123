@@ -36,11 +36,11 @@ public class Main {
         } else
         if (!isRoman1 && !isRoman2) {
         } else {
-            throw new IllegalArgumentException("Обе переменные должны быть либо римскими, либо арабскими."); // условие 5
+            throw new IllegalArgumentException("Обе переменные должны быть либо римскими, либо арабскими.");
         }
 
         if (num1 < 1 || num1 > 10 || num2 < 1 || num2 > 10){
-            throw new IllegalArgumentException("Значения не могут выходить за переделы от 1 до 10"); // условие 3 и 7
+            throw new IllegalArgumentException("Значения не могут выходить за переделы от 1 до 10");
         }
 
         char operation = parts[1].charAt(0);
@@ -58,10 +58,10 @@ public class Main {
                 result = num1/num2;
                 break;
             default:
-                throw new IllegalArgumentException("Неизвестная операция");                    // условие 8
+                throw new IllegalArgumentException("Неизвестная операция");                    
         }
 
-        if (!(isRoman1 && isRoman2)){                                                 // условие 6
+        if (!(isRoman1 && isRoman2)){                                                 
             return String.valueOf(result);
         }
         else return RomanNumerals.arabToRom(result);
@@ -92,7 +92,7 @@ class RomanNumerals {
         return 0;
     }
     public static String arabToRom(int arabNumeral){
-        if (arabNumeral <= 0){                                             // Условие 10
+        if (arabNumeral <= 0){                                             
             throw new IllegalArgumentException("Результат операций римских чисел не может быть меньше или равен нулю");
         }
         String arabNumber = roman_Numerals[arabNumeral];
